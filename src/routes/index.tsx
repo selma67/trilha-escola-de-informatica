@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, BriefcaseBusiness, ChevronRight, Clock3, Laptop, MapPin, Menu, MessageCircle, Palette, Smartphone, Sparkles } from "lucide-react";
-import heroImage from "@/assets/trilha-aula-presencial.jpg";
-import officeImage from "@/assets/trilha-office-aula.jpg";
-import communityImage from "@/assets/trilha-comunidade.jpg";
+import { BriefcaseBusiness, ChevronRight, Clock3, Laptop, MapPin, Menu, MessageCircle, Palette, Smartphone, Sparkles } from "lucide-react";
+import youngStudentImage from "@/assets/trilha-aula-individual-jovem.jpg";
+import adultStudentImage from "@/assets/trilha-aula-individual-adulto.jpg";
 import logoAsset from "@/assets/trilha-avatar.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -42,19 +41,19 @@ export const Route = createFileRoute("/")({
 const whatsapp = "https://wa.me/5515981048499?text=Olá%2C%20gostaria%20de%20conhecer%20as%20aulas%20da%20Trilha.";
 
 const audiences = [
-  { icon: Smartphone, title: "Terceira idade", text: "Celular, internet e computador com calma, segurança e explicações claras.", tone: "text-teal bg-teal/10" },
-  { icon: Laptop, title: "Começando do zero", text: "Do primeiro clique à autonomia para resolver tarefas digitais do dia a dia.", tone: "text-coral bg-coral/10" },
-  { icon: Sparkles, title: "Voltando a estudar", text: "Recupere a confiança e acompanhe as ferramentas usadas nos estudos atuais.", tone: "text-green bg-green/10" },
-  { icon: BriefcaseBusiness, title: "Foco no trabalho", text: "Conhecimentos práticos para currículo, processos seletivos e rotina profissional.", tone: "text-ink bg-ink/10" },
+  { icon: Laptop, title: "Começando do Zero", text: "Nunca teve intimidade com o computador e quer aprender do absoluto zero, sem complicações.", tone: "text-coral bg-coral/10" },
+  { icon: Sparkles, title: "Voltando a Estudar", text: "Retome os seus estudos com confiança e adapte-se facilmente às novas tecnologias.", tone: "text-green bg-green/10" },
+  { icon: Smartphone, title: "Terceira Idade", text: "Aprenda a mexer no celular, na internet e no computador com muita paciência e tranquilidade.", tone: "text-teal bg-teal/10" },
+  { icon: BriefcaseBusiness, title: "Foco no Trabalho", text: "Domine o Pacote Office (Word, Excel, PowerPoint) e ferramentas requisitadas pelo mercado.", tone: "text-ink bg-ink/10" },
 ];
 
 const courses = [
-  { title: "Informática básica", text: "Arquivos, internet, e-mail e uso seguro do computador.", icon: Laptop },
-  { title: "Pacote Office", text: "Word, Excel e PowerPoint para trabalho e estudos.", icon: BriefcaseBusiness },
-  { title: "Canva e criatividade", text: "Apresentações e conteúdos visuais com mais qualidade.", icon: Palette },
-  { title: "Celular e internet", text: "Mais autonomia digital para a terceira idade.", icon: Smartphone },
-  { title: "Aulas particulares", text: "Conteúdo direcionado exatamente ao que você precisa.", icon: MessageCircle },
-  { title: "Currículo e IA", text: "Ferramentas atuais para processos seletivos e mercado de trabalho.", icon: Sparkles },
+  { title: "Informática Básica", text: "Conceitos fundamentais para organizar arquivos, navegar na internet e usar o computador com segurança.", icon: Laptop },
+  { title: "Pacote Office", text: "Word, Excel e PowerPoint essenciais para o trabalho, estudos e tarefas diárias.", icon: BriefcaseBusiness },
+  { title: "Canva e Criatividade", text: "Criação de apresentações, conteúdos visuais e uso inteligente de ferramentas digitais.", icon: Palette },
+  { title: "Celular e Internet para Terceira Idade", text: "Aulas adaptadas para idosos ganharem autonomia e independência digital.", icon: Smartphone },
+  { title: "Aulas Particulares", text: "Atendimento individualizado para focar exatamente no que você precisa aprender.", icon: MessageCircle },
+  { title: "Currículo e IA", text: "Uso de Inteligência Artificial e preparação moderna para processos seletivos e mercado de trabalho.", icon: Sparkles },
 ];
 
 function Index() {
@@ -81,26 +80,26 @@ function Index() {
           <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-cream to-transparent" />
           <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
             <div className="z-10">
-              <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-green/12 px-4 py-2 text-sm font-bold text-green"><MapPin size={16} /> Aulas presenciais em Sorocaba</span>
+              <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-green/12 px-4 py-2 text-sm font-bold text-green"><MapPin size={16} /> Aulas Presenciais em Sorocaba</span>
               <h1 className="max-w-2xl text-5xl font-bold leading-[1.03] sm:text-6xl lg:text-7xl">Você não precisa saber para <span className="text-coral">começar.</span></h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/70 sm:text-xl">Aprenda informática do zero, no seu ritmo e sem vergonha de perguntar. Aulas humanizadas para a vida, os estudos e o trabalho.</p>
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/70 sm:text-xl">Talvez você esteja começando agora, tenha parado de estudar e esteja voltando, ou precise aprender informática para trabalhar, estudar e ter autonomia.</p>
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-                <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-coral px-7 py-4 text-lg font-bold text-primary-foreground coral-glow transition-transform hover:-translate-y-1"><MessageCircle size={21} /> Falar com a Trilha</a>
-                <a href="#cursos" className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-ink/10 bg-card px-7 py-4 text-lg font-bold hover:border-coral/40">Ver o que você pode aprender <ArrowRight size={20} /></a>
+                <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-coral px-7 py-4 text-lg font-bold text-primary-foreground coral-glow transition-transform hover:-translate-y-1"><MessageCircle size={21} /> Falar pelo WhatsApp</a>
               </div>
             </div>
             <div className="relative lg:pl-6">
               <div className="overflow-hidden rounded-2xl border-8 border-card coral-glow">
-                <img src={heroImage} alt="Professora auxiliando aluna em uma aula presencial de informática" width={1200} height={912} className="aspect-[4/3] w-full object-cover" />
+                <img src={youngStudentImage} alt="Aluna jovem recebendo atendimento individual em uma aula de informática" width={1200} height={912} className="aspect-[4/3] w-full object-cover" />
               </div>
-              <div className="absolute -bottom-6 left-2 max-w-56 rounded-xl bg-teal p-5 text-accent-foreground shadow-xl sm:left-0"><p className="font-heading text-xl font-bold">Aprenda com calma.</p><p className="mt-1 text-sm opacity-90">Professor ao seu lado, em cada etapa.</p></div>
+              <div className="absolute -bottom-6 left-2 max-w-56 rounded-xl bg-teal p-5 text-accent-foreground shadow-xl sm:left-0"><p className="font-heading text-xl font-bold">Conhecimento que abre caminhos.</p></div>
             </div>
           </div>
         </section>
 
         <section id="para-voce" className="bg-card py-24">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="max-w-3xl"><span className="font-bold uppercase text-coral">Uma escola para pessoas reais</span><h2 className="mt-3 text-4xl font-bold sm:text-5xl">A tecnologia pode fazer parte da sua vida.</h2><p className="mt-5 text-lg leading-relaxed text-ink/65">Na Trilha, cada aluno encontra espaço para aprender sem pressão, comparar seu ritmo ou ter medo de errar.</p></div>
+            <div className="max-w-4xl"><h2 className="text-4xl font-bold sm:text-5xl">Na Trilha, você encontra esse espaço.</h2><p className="mt-5 text-lg leading-relaxed text-ink/65">Um lugar para aprender informática em Sorocaba sem vergonha de perguntar, sem medo de errar e sem precisar acompanhar o ritmo de outra pessoa.</p><p className="mt-4 text-lg leading-relaxed text-ink/65">Aqui você aprende desde o básico até as ferramentas essenciais para o seu dia a dia profissional e pessoal, com atendimento totalmente humanizado, acolhedor e seguro para todos.</p></div>
+            <h2 className="mt-20 text-3xl font-bold sm:text-4xl">Para diferentes momentos da vida</h2>
             <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 md:grid-cols-2 lg:grid-cols-4">
               {audiences.map(({ icon: Icon, title, text, tone }) => <article key={title} className="bg-card p-7"><div className={`mb-6 grid size-13 place-items-center rounded-xl ${tone}`}><Icon size={25} /></div><h3 className="text-xl font-bold">{title}</h3><p className="mt-3 leading-relaxed text-ink/65">{text}</p></article>)}
             </div>
@@ -110,8 +109,8 @@ function Index() {
         <section id="cursos" className="py-24">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
-              <div><span className="font-bold uppercase text-green">Conteúdo útil desde a primeira aula</span><h2 className="mt-3 text-4xl font-bold sm:text-5xl">O que você pode aprender na Trilha</h2><p className="mt-5 text-lg leading-relaxed text-ink/65">Do básico às ferramentas que ajudam você a estudar, trabalhar e resolver tarefas com independência.</p></div>
-              <img src={officeImage} alt="Aluno aprendendo planilhas em aula prática de informática" loading="lazy" width={800} height={1008} className="h-96 w-full rounded-2xl object-cover object-center" />
+              <div><h2 className="text-4xl font-bold sm:text-5xl">O que você pode aprender na Trilha</h2></div>
+              <img src={adultStudentImage} alt="Aluno adulto recebendo atendimento individual em uma aula prática de informática" loading="lazy" width={1200} height={912} className="h-96 w-full rounded-2xl object-cover object-center" />
             </div>
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {courses.map(({ title, text, icon: Icon }, i) => <article key={title} className={`group min-h-52 rounded-xl p-7 ${i === 0 ? "bg-coral text-primary-foreground" : i === 3 ? "bg-green text-secondary-foreground" : "border border-ink/10 bg-card"}`}><Icon size={28} /><h3 className="mt-8 text-2xl font-bold">{title}</h3><p className={`mt-3 leading-relaxed ${i === 0 ? "text-primary-foreground/85" : "text-ink/65"}`}>{text}</p></article>)}
@@ -121,12 +120,8 @@ function Index() {
 
         <section id="escola" className="overflow-hidden bg-ink py-24 text-primary-foreground">
           <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-2 lg:items-center lg:px-8">
-            <div><span className="font-bold uppercase text-coral-soft">Por que escolher a Trilha?</span><h2 className="mt-3 text-4xl font-bold sm:text-5xl">Acolhimento também ensina.</h2><p className="mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/65">Atendimento humanizado, aulas presenciais e atenção ao que você realmente precisa aprender.</p>
-              <div className="mt-10 space-y-7">
-                {[['Aulas presenciais','Ajuda próxima para tirar dúvidas na hora e praticar com segurança.'],['No seu próprio ritmo','O conteúdo avança conforme sua confiança e seu aprendizado.'],['Aprendizado para a vida real','Exercícios ligados às tarefas que você encontra no dia a dia.']].map(([title,text],i)=><div key={title} className="flex gap-5"><span className={`mt-1 h-auto w-1 rounded-full ${i===1?'bg-green':'bg-coral'}`} /><div><h3 className="text-xl font-bold">{title}</h3><p className="mt-1 text-primary-foreground/60">{text}</p></div></div>)}
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4"><img src={communityImage} alt="Alunos conversando em ambiente acolhedor de aprendizagem" loading="lazy" width={816} height={816} className="col-span-2 aspect-[16/10] w-full rounded-2xl object-cover" /><div className="rounded-xl bg-coral p-6"><p className="text-3xl font-bold">Presencial</p><p className="mt-2 text-primary-foreground/80">em Sorocaba</p></div><div className="rounded-xl bg-green p-6 text-secondary-foreground"><p className="text-3xl font-bold">Seu ritmo</p><p className="mt-2 text-secondary-foreground/75">sem pressão</p></div></div>
+            <div><h2 className="text-4xl font-bold sm:text-5xl">Dê o primeiro passo</h2><p className="mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/70">Você não precisa chegar sabendo. Na Trilha, você encontra espaço para aprender no seu próprio tempo.</p><a href={whatsapp} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-3 rounded-xl bg-coral px-7 py-4 text-lg font-bold text-primary-foreground"><MessageCircle size={22} /> Quero Conversar com a Trilha</a></div>
+            <img src={youngStudentImage} alt="Aula individual de informática para uma aluna jovem" loading="lazy" width={1200} height={912} className="aspect-[4/3] w-full rounded-2xl object-cover" />
           </div>
         </section>
 
@@ -134,8 +129,8 @@ function Index() {
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="overflow-hidden rounded-2xl bg-card shadow-xl shadow-ink/5 ring-1 ring-ink/5">
               <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
-                <div className="p-8 sm:p-12 lg:p-16"><span className="font-bold uppercase text-coral">Dê o primeiro passo</span><h2 className="mt-3 text-4xl font-bold sm:text-5xl">Venha conversar com a Trilha.</h2><p className="mt-5 max-w-xl text-lg leading-relaxed text-ink/65">Conte o que você quer aprender. Vamos orientar você sobre a melhor forma de começar.</p><a href={whatsapp} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-3 rounded-xl bg-coral px-7 py-4 text-lg font-bold text-primary-foreground hover:bg-coral-soft"><MessageCircle size={22} /> Chamar no WhatsApp</a></div>
-                <div className="bg-linear-to-br from-coral to-coral-soft p-8 text-primary-foreground sm:p-12 lg:p-16"><h3 className="text-2xl font-bold">Trilha Escola de Informática</h3><div className="mt-8 space-y-6"><div className="flex gap-4"><MapPin className="mt-1 shrink-0" /><p>Rua Assis Machado, 297<br />Vila Hortência — Sorocaba/SP</p></div><div className="flex gap-4"><MessageCircle className="mt-1 shrink-0" /><a href={whatsapp} target="_blank" rel="noreferrer" className="font-bold underline decoration-primary-foreground/40 underline-offset-4">(15) 98104-8499</a></div><div className="flex gap-4"><Clock3 className="mt-1 shrink-0" /><p>Segunda a sexta: 08:30–18:00<br />Sábado: 09:00–12:00</p></div></div></div>
+                <div className="p-8 sm:p-12 lg:p-16"><h2 className="text-4xl font-bold sm:text-5xl">Trilha Escola de Informática</h2><p className="mt-5 text-lg text-ink/65">Aulas presenciais em Sorocaba - SP</p><div className="mt-8 flex gap-4"><MapPin className="mt-1 shrink-0 text-coral" /><p>Rua Assis Machado, 297 — Vila Hortência — Sorocaba/SP</p></div><div className="mt-6 flex gap-4"><MessageCircle className="mt-1 shrink-0 text-coral" /><p>WhatsApp: <a href={whatsapp} target="_blank" rel="noreferrer" className="font-bold underline">(15) 98104-8499</a></p></div></div>
+                <div className="bg-linear-to-br from-coral to-coral-soft p-8 text-primary-foreground sm:p-12 lg:p-16"><h3 className="text-2xl font-bold">Horário de Atendimento:</h3><div className="mt-8 flex gap-4"><Clock3 className="mt-1 shrink-0" /><p>Segunda a Sexta: 08:30 - 18:00 | Sábado: 09:00 - 12:00</p></div></div>
               </div>
             </div>
           </div>
