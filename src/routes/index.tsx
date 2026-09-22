@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, BriefcaseBusiness, ChevronRight, Clock3, Laptop, MapPin, Menu, MessageCircle, Palette, Smartphone, Sparkles } from "lucide-react";
+import { BriefcaseBusiness, ChevronRight, Clock3, Laptop, MapPin, Menu, MessageCircle, Palette, Smartphone, Sparkles } from "lucide-react";
 import officeImage from "@/assets/trilha-office-aula.jpg";
 import diverseImage from "@/assets/trilha-publico-diverso.jpg";
 import logoAsset from "@/assets/trilha-avatar.png.asset.json";
