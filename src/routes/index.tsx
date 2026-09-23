@@ -38,7 +38,7 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const whatsapp = "https://wa.me/5515981048499?text=Olá%2C%20gostaria%20de%20conhecer%20as%20aulas%20da%20Trilha.";
+const whatsapp = `https://wa.me/5515981048499?text=${encodeURIComponent("Olá, gostaria de conhecer as aulas da Trilha.")}`;
 
 const audiences = [
   { icon: Laptop, title: "Começando do Zero", text: "Nunca teve intimidade com o computador e quer aprender do absoluto zero, sem complicações.", tone: "text-coral bg-coral/10" },
