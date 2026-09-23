@@ -53,7 +53,7 @@ const courses = [
   { title: "Canva e Criatividade", text: "Criação de apresentações, conteúdos visuais e uso inteligente de ferramentas digitais.", icon: Palette },
   { title: "Celular e Internet para Terceira Idade", text: "Aulas adaptadas para idosos ganharem autonomia e independência digital.", icon: Smartphone },
   { title: "Aulas Particulares", text: "Atendimento individualizado para focar exatamente no que você precisa aprender.", icon: MessageCircle },
-  { title: "Currículo e IA", text: "Uso de Inteligência Artificial e preparação moderna para processos seletivos e mercado de trabalho.", icon: Sparkles },
+  { title: "\u00a0Curriculum e Entrevista", text: "Uso de Inteligência Artificial na preparação do curriculum e treinos para entrevistas.", icon: Sparkles },
 ];
 
 function Index() {
@@ -80,8 +80,8 @@ function Index() {
           <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-cream to-transparent" />
           <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
             <div className="z-10">
-              <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-green/12 px-4 py-2 text-sm font-bold text-green"><MapPin size={16} /> Aulas Presenciais em Sorocaba</span>
-              <h1 className="max-w-2xl text-5xl font-bold leading-[1.03] sm:text-6xl lg:text-7xl">Você não precisa saber para <span className="text-coral">começar.</span></h1>
+              <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-green/12 px-4 py-2 text-sm font-bold text-green"><MapPin size={16} /> Aulas de Informática Presenciais em Sorocaba</span>
+              <h1 className="max-w-2xl text-5xl font-bold leading-[1.03] sm:text-6xl lg:text-7xl">Aprenda informática do zero. <span className="text-coral">Aulas individuais.</span></h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/70 sm:text-xl">Talvez você esteja começando agora, tenha parado de estudar e esteja voltando, ou precise aprender informática para trabalhar, estudar e ter autonomia.</p>
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                 <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-coral px-7 py-4 text-lg font-bold text-primary-foreground coral-glow transition-transform hover:-translate-y-1"><MessageCircle size={21} /> Falar pelo WhatsApp</a>
