@@ -89,7 +89,7 @@ function Index() {
             </div>
             <div className="relative lg:pl-6">
               <div className="overflow-hidden rounded-2xl border-8 border-card coral-glow">
-                <img src={youngStudentImage} alt="Aluna jovem recebendo atendimento individual em uma aula de informática" width={1200} height={912} className="aspect-[4/3] w-full object-cover" />
+                <img src={youngStudentImage} alt="Professora da Trilha ensinando um aluno em aula individual de informática" width={1200} height={912} className="aspect-[4/3] w-full object-cover" />
               </div>
               <div className="absolute -bottom-6 left-2 max-w-56 rounded-xl bg-teal p-5 text-accent-foreground shadow-xl sm:left-0"><p className="font-heading text-xl font-bold">Conhecimento que abre caminhos.</p></div>
             </div>
@@ -110,7 +110,7 @@ function Index() {
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
               <div><h2 className="text-4xl font-bold sm:text-5xl">O que você pode aprender na Trilha</h2></div>
-              <img src={adultStudentImage} alt="Aluno adulto recebendo atendimento individual em uma aula prática de informática" loading="lazy" width={1200} height={912} className="h-96 w-full rounded-2xl object-cover object-center" />
+              <img src={adultStudentImage} alt="Professora da Trilha em aula individual de informática com um aluno adulto" loading="lazy" width={1200} height={912} className="h-96 w-full rounded-2xl object-cover object-center" />
             </div>
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {courses.map(({ title, text, icon: Icon }, i) => <article key={title} className={`group min-h-52 rounded-xl p-7 ${i === 0 ? "bg-coral text-primary-foreground" : i === 3 ? "bg-green text-secondary-foreground" : "border border-ink/10 bg-card"}`}><Icon size={28} /><h3 className="mt-8 text-2xl font-bold">{title}</h3><p className={`mt-3 leading-relaxed ${i === 0 ? "text-primary-foreground/85" : "text-ink/65"}`}>{text}</p></article>)}
@@ -121,7 +121,7 @@ function Index() {
         <section id="escola" className="overflow-hidden bg-ink py-24 text-primary-foreground">
           <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-2 lg:items-center lg:px-8">
             <div><h2 className="text-4xl font-bold sm:text-5xl">Dê o primeiro passo</h2><p className="mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/70">Você não precisa chegar sabendo. Na Trilha, você encontra espaço para aprender no seu próprio tempo.</p><a href={whatsapp} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-3 rounded-xl bg-coral px-7 py-4 text-lg font-bold text-primary-foreground"><MessageCircle size={22} /> Quero Conversar com a Trilha</a></div>
-            <img src={youngStudentImage} alt="Aula individual de informática para uma aluna jovem" loading="lazy" width={1200} height={912} className="aspect-[4/3] w-full rounded-2xl object-cover" />
+            <img src={youngStudentImage} alt="Aula individual de informática com a professora da Trilha" loading="lazy" width={1200} height={912} className="aspect-[4/3] w-full rounded-2xl object-cover" />
           </div>
         </section>
 
