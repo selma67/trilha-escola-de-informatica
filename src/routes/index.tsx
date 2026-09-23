@@ -89,7 +89,7 @@ function Index() {
             </div>
             <div className="relative lg:pl-6">
               <div className="overflow-hidden rounded-2xl border-8 border-card coral-glow">
-                <img src={youngStudentImage} alt="Professora da Trilha ensinando um aluno em aula individual de informática" width={1200} height={912} className="aspect-[4/3] w-full object-cover" />
+                <img src={youngStudentImage} alt="Professora da Trilha ensinando uma aluna em aula individual de informática" width={1200} height={912} className="aspect-[4/3] w-full object-cover" />
               </div>
               <div className="absolute -bottom-6 left-2 max-w-56 rounded-xl bg-teal p-5 text-accent-foreground shadow-xl sm:left-0"><p className="font-heading text-xl font-bold">Há 15 anos ministrando aulas de informática</p></div>
             </div>
