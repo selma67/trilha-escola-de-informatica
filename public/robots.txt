@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://trilha-escola-de-informatica.lovable.app/sitemap.xml
