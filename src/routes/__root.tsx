@@ -96,17 +96,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     scripts: [
       {
-        // Google Tag Manager - dataLayer init (compartilhado pelos dois contêineres)
+        // Google Tag Manager - inicialização do dataLayer
         children: `window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());`,
       },
       {
         src: "https://www.googletagmanager.com/gtm.js?id=GTM-M8W7NG8L",
-        async: true,
-      },
-      {
-        src: "https://www.googletagmanager.com/gtm.js?id=GTM-WZ39WRQN",
         async: true,
       },
     ],
@@ -119,7 +115,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
