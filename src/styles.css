@@ -64,6 +64,7 @@
   --color-coral: var(--coral);
   --color-coral-soft: var(--coral-soft);
   --color-green: var(--green);
+  --color-whatsapp: var(--whatsapp);
   --color-cream: var(--cream);
   --color-ink: var(--ink);
   --color-teal: var(--teal);
@@ -106,6 +107,7 @@
   --coral: oklch(0.62 0.194 29);
   --coral-soft: oklch(0.71 0.17 31);
   --green: oklch(0.7 0.18 139);
+  --whatsapp: oklch(0.76095262 0.20146044 149.74029693);
   --cream: oklch(0.99 0.012 92);
   --ink: oklch(0.27 0.018 48);
   --teal: oklch(0.62 0.12 209);
@@ -173,6 +175,10 @@
 
 @utility coral-glow {
   box-shadow: 0 24px 80px color-mix(in oklab, var(--coral) 20%, transparent);
+}
+
+@utility whatsapp-glow {
+  box-shadow: 0 24px 80px color-mix(in oklab, var(--whatsapp) 20%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {

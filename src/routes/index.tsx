@@ -69,9 +69,9 @@ function Index() {
             <a href="#para-voce" className="font-semibold hover:text-coral">Para você</a>
             <a href="#cursos" className="font-semibold hover:text-coral">Cursos</a>
             <a href="#escola" className="font-semibold hover:text-coral">A escola</a>
-            <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-coral px-5 py-3 font-bold text-primary-foreground transition-transform hover:-translate-y-0.5"><MessageCircle size={18} /> WhatsApp</a>
+            <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-whatsapp px-5 py-3 font-bold text-primary-foreground transition-transform hover:-translate-y-0.5"><MessageCircle size={18} /> WhatsApp</a>
           </div>
-          <a href={whatsapp} target="_blank" rel="noreferrer" className="grid size-11 place-items-center rounded-lg bg-coral text-primary-foreground md:hidden" aria-label="Falar no WhatsApp"><Menu size={22} /></a>
+          <a href={whatsapp} target="_blank" rel="noreferrer" className="grid size-11 place-items-center rounded-lg bg-whatsapp text-primary-foreground md:hidden" aria-label="Falar no WhatsApp"><Menu size={22} /></a>
         </div>
       </nav>
 
@@ -84,7 +84,7 @@ function Index() {
               <h1 className="max-w-2xl text-5xl font-bold leading-[1.03] sm:text-6xl lg:text-7xl">Aprenda informática do zero. <span className="text-coral">Aulas individuais.</span></h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/70 sm:text-xl">Talvez você esteja começando agora, tenha parado de estudar e esteja voltando, ou precise aprender informática para trabalhar, estudar e ter autonomia.</p>
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-                <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-coral px-7 py-4 text-lg font-bold text-primary-foreground coral-glow transition-transform hover:-translate-y-1"><MessageCircle size={21} /> Falar pelo WhatsApp</a>
+                <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-whatsapp px-7 py-4 text-lg font-bold text-primary-foreground whatsapp-glow transition-transform hover:-translate-y-1"><MessageCircle size={21} /> Falar pelo WhatsApp</a>
               </div>
             </div>
             <div className="relative lg:pl-6">
@@ -120,7 +120,7 @@ function Index() {
 
         <section id="escola" className="overflow-hidden bg-ink py-24 text-primary-foreground">
           <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-2 lg:items-center lg:px-8">
-            <div><h2 className="text-4xl font-bold sm:text-5xl">Dê o primeiro passo</h2><p className="mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/70">Você não precisa chegar sabendo. Na Trilha, você encontra espaço para aprender no seu próprio tempo.</p><a href={whatsapp} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-3 rounded-xl bg-coral px-7 py-4 text-lg font-bold text-primary-foreground"><MessageCircle size={22} /> Quero Conversar com a Trilha</a></div>
+            <div><h2 className="text-4xl font-bold sm:text-5xl">Dê o primeiro passo</h2><p className="mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/70">Você não precisa chegar sabendo. Na Trilha, você encontra espaço para aprender no seu próprio tempo.</p><a href={whatsapp} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-3 rounded-xl bg-whatsapp px-7 py-4 text-lg font-bold text-primary-foreground"><MessageCircle size={22} /> Quero Conversar com a Trilha</a></div>
             <img src={youngStudentImage} alt="Aula individual de informática com a professora da Trilha" loading="lazy" width={1200} height={912} className="aspect-[4/3] w-full rounded-2xl object-cover" />
           </div>
         </section>
