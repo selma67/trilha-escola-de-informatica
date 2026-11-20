@@ -10,33 +10,133 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CursoCanvaSorocabaRouteImport } from './routes/curso-canva-sorocaba'
+import { Route as CursoCelularTerceiraIdadeSorocabaRouteImport } from './routes/curso-celular-terceira-idade-sorocaba'
+import { Route as CursoCurriculoEntrevistaSorocabaRouteImport } from './routes/curso-curriculo-entrevista-sorocaba'
+import { Route as CursoExcelSorocabaRouteImport } from './routes/curso-excel-sorocaba'
+import { Route as CursoGoogleMeuNegocioSorocabaRouteImport } from './routes/curso-google-meu-negocio-sorocaba'
+import { Route as CursoInformaticaBasicaSorocabaRouteImport } from './routes/curso-informatica-basica-sorocaba'
+import { Route as CursoPacoteOfficeSorocabaRouteImport } from './routes/curso-pacote-office-sorocaba'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CursoCanvaSorocabaRoute = CursoCanvaSorocabaRouteImport.update({
+  id: '/curso-canva-sorocaba',
+  path: '/curso-canva-sorocaba',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CursoCelularTerceiraIdadeSorocabaRoute =
+  CursoCelularTerceiraIdadeSorocabaRouteImport.update({
+    id: '/curso-celular-terceira-idade-sorocaba',
+    path: '/curso-celular-terceira-idade-sorocaba',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CursoCurriculoEntrevistaSorocabaRoute =
+  CursoCurriculoEntrevistaSorocabaRouteImport.update({
+    id: '/curso-curriculo-entrevista-sorocaba',
+    path: '/curso-curriculo-entrevista-sorocaba',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CursoExcelSorocabaRoute = CursoExcelSorocabaRouteImport.update({
+  id: '/curso-excel-sorocaba',
+  path: '/curso-excel-sorocaba',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CursoGoogleMeuNegocioSorocabaRoute =
+  CursoGoogleMeuNegocioSorocabaRouteImport.update({
+    id: '/curso-google-meu-negocio-sorocaba',
+    path: '/curso-google-meu-negocio-sorocaba',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CursoInformaticaBasicaSorocabaRoute =
+  CursoInformaticaBasicaSorocabaRouteImport.update({
+    id: '/curso-informatica-basica-sorocaba',
+    path: '/curso-informatica-basica-sorocaba',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CursoPacoteOfficeSorocabaRoute =
+  CursoPacoteOfficeSorocabaRouteImport.update({
+    id: '/curso-pacote-office-sorocaba',
+    path: '/curso-pacote-office-sorocaba',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/curso-canva-sorocaba': typeof CursoCanvaSorocabaRoute
+  '/curso-celular-terceira-idade-sorocaba': typeof CursoCelularTerceiraIdadeSorocabaRoute
+  '/curso-curriculo-entrevista-sorocaba': typeof CursoCurriculoEntrevistaSorocabaRoute
+  '/curso-excel-sorocaba': typeof CursoExcelSorocabaRoute
+  '/curso-google-meu-negocio-sorocaba': typeof CursoGoogleMeuNegocioSorocabaRoute
+  '/curso-informatica-basica-sorocaba': typeof CursoInformaticaBasicaSorocabaRoute
+  '/curso-pacote-office-sorocaba': typeof CursoPacoteOfficeSorocabaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/curso-canva-sorocaba': typeof CursoCanvaSorocabaRoute
+  '/curso-celular-terceira-idade-sorocaba': typeof CursoCelularTerceiraIdadeSorocabaRoute
+  '/curso-curriculo-entrevista-sorocaba': typeof CursoCurriculoEntrevistaSorocabaRoute
+  '/curso-excel-sorocaba': typeof CursoExcelSorocabaRoute
+  '/curso-google-meu-negocio-sorocaba': typeof CursoGoogleMeuNegocioSorocabaRoute
+  '/curso-informatica-basica-sorocaba': typeof CursoInformaticaBasicaSorocabaRoute
+  '/curso-pacote-office-sorocaba': typeof CursoPacoteOfficeSorocabaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/curso-canva-sorocaba': typeof CursoCanvaSorocabaRoute
+  '/curso-celular-terceira-idade-sorocaba': typeof CursoCelularTerceiraIdadeSorocabaRoute
+  '/curso-curriculo-entrevista-sorocaba': typeof CursoCurriculoEntrevistaSorocabaRoute
+  '/curso-excel-sorocaba': typeof CursoExcelSorocabaRoute
+  '/curso-google-meu-negocio-sorocaba': typeof CursoGoogleMeuNegocioSorocabaRoute
+  '/curso-informatica-basica-sorocaba': typeof CursoInformaticaBasicaSorocabaRoute
+  '/curso-pacote-office-sorocaba': typeof CursoPacoteOfficeSorocabaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/curso-canva-sorocaba'
+    | '/curso-celular-terceira-idade-sorocaba'
+    | '/curso-curriculo-entrevista-sorocaba'
+    | '/curso-excel-sorocaba'
+    | '/curso-google-meu-negocio-sorocaba'
+    | '/curso-informatica-basica-sorocaba'
+    | '/curso-pacote-office-sorocaba'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/curso-canva-sorocaba'
+    | '/curso-celular-terceira-idade-sorocaba'
+    | '/curso-curriculo-entrevista-sorocaba'
+    | '/curso-excel-sorocaba'
+    | '/curso-google-meu-negocio-sorocaba'
+    | '/curso-informatica-basica-sorocaba'
+    | '/curso-pacote-office-sorocaba'
+  id:
+    | '__root__'
+    | '/'
+    | '/curso-canva-sorocaba'
+    | '/curso-celular-terceira-idade-sorocaba'
+    | '/curso-curriculo-entrevista-sorocaba'
+    | '/curso-excel-sorocaba'
+    | '/curso-google-meu-negocio-sorocaba'
+    | '/curso-informatica-basica-sorocaba'
+    | '/curso-pacote-office-sorocaba'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CursoCanvaSorocabaRoute: typeof CursoCanvaSorocabaRoute
+  CursoCelularTerceiraIdadeSorocabaRoute: typeof CursoCelularTerceiraIdadeSorocabaRoute
+  CursoCurriculoEntrevistaSorocabaRoute: typeof CursoCurriculoEntrevistaSorocabaRoute
+  CursoExcelSorocabaRoute: typeof CursoExcelSorocabaRoute
+  CursoGoogleMeuNegocioSorocabaRoute: typeof CursoGoogleMeuNegocioSorocabaRoute
+  CursoInformaticaBasicaSorocabaRoute: typeof CursoInformaticaBasicaSorocabaRoute
+  CursoPacoteOfficeSorocabaRoute: typeof CursoPacoteOfficeSorocabaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +148,68 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/curso-canva-sorocaba': {
+      id: '/curso-canva-sorocaba'
+      path: '/curso-canva-sorocaba'
+      fullPath: '/curso-canva-sorocaba'
+      preLoaderRoute: typeof CursoCanvaSorocabaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/curso-celular-terceira-idade-sorocaba': {
+      id: '/curso-celular-terceira-idade-sorocaba'
+      path: '/curso-celular-terceira-idade-sorocaba'
+      fullPath: '/curso-celular-terceira-idade-sorocaba'
+      preLoaderRoute: typeof CursoCelularTerceiraIdadeSorocabaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/curso-curriculo-entrevista-sorocaba': {
+      id: '/curso-curriculo-entrevista-sorocaba'
+      path: '/curso-curriculo-entrevista-sorocaba'
+      fullPath: '/curso-curriculo-entrevista-sorocaba'
+      preLoaderRoute: typeof CursoCurriculoEntrevistaSorocabaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/curso-excel-sorocaba': {
+      id: '/curso-excel-sorocaba'
+      path: '/curso-excel-sorocaba'
+      fullPath: '/curso-excel-sorocaba'
+      preLoaderRoute: typeof CursoExcelSorocabaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/curso-google-meu-negocio-sorocaba': {
+      id: '/curso-google-meu-negocio-sorocaba'
+      path: '/curso-google-meu-negocio-sorocaba'
+      fullPath: '/curso-google-meu-negocio-sorocaba'
+      preLoaderRoute: typeof CursoGoogleMeuNegocioSorocabaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/curso-informatica-basica-sorocaba': {
+      id: '/curso-informatica-basica-sorocaba'
+      path: '/curso-informatica-basica-sorocaba'
+      fullPath: '/curso-informatica-basica-sorocaba'
+      preLoaderRoute: typeof CursoInformaticaBasicaSorocabaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/curso-pacote-office-sorocaba': {
+      id: '/curso-pacote-office-sorocaba'
+      path: '/curso-pacote-office-sorocaba'
+      fullPath: '/curso-pacote-office-sorocaba'
+      preLoaderRoute: typeof CursoPacoteOfficeSorocabaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CursoCanvaSorocabaRoute: CursoCanvaSorocabaRoute,
+  CursoCelularTerceiraIdadeSorocabaRoute:
+    CursoCelularTerceiraIdadeSorocabaRoute,
+  CursoCurriculoEntrevistaSorocabaRoute: CursoCurriculoEntrevistaSorocabaRoute,
+  CursoExcelSorocabaRoute: CursoExcelSorocabaRoute,
+  CursoGoogleMeuNegocioSorocabaRoute: CursoGoogleMeuNegocioSorocabaRoute,
+  CursoInformaticaBasicaSorocabaRoute: CursoInformaticaBasicaSorocabaRoute,
+  CursoPacoteOfficeSorocabaRoute: CursoPacoteOfficeSorocabaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
