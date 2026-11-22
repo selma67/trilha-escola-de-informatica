@@ -6,8 +6,17 @@ export interface CourseFaq {
   answer: string;
 }
 
+export type CourseSlug =
+  | "curso-informatica-basica-sorocaba"
+  | "curso-pacote-office-sorocaba"
+  | "curso-excel-sorocaba"
+  | "curso-canva-sorocaba"
+  | "curso-celular-terceira-idade-sorocaba"
+  | "curso-google-meu-negocio-sorocaba"
+  | "curso-curriculo-entrevista-sorocaba";
+
 export interface Course {
-  slug: string;
+  slug: CourseSlug;
   title: string;
   short: string;
   icon: LucideIcon;
@@ -18,7 +27,7 @@ export interface Course {
   learn: string[];
   audience: string;
   faq: CourseFaq[];
-  related: { slug: string; label: string }[];
+  related: { slug: CourseSlug; label: string }[];
 }
 
 export const courses: Course[] = [
@@ -240,7 +249,7 @@ export const courses: Course[] = [
   },
 ];
 
-export function getCourse(slug: string): Course {
+export function getCourse(slug: CourseSlug): Course {
   const course = courses.find((c) => c.slug === slug);
   if (!course) throw new Error(`Curso não encontrado: ${slug}`);
   return course;

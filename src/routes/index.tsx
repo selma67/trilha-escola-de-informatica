@@ -1,8 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { BriefcaseBusiness, ChevronRight, Clock3, Laptop, MapPin, Menu, MessageCircle, Palette, Smartphone, Sparkles } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { BriefcaseBusiness, ChevronRight, Clock3, Laptop, MapPin, Menu, MessageCircle, Smartphone, Sparkles } from "lucide-react";
 import youngStudentImage from "@/assets/trilha-aula-aluna-professora.jpg";
 import adultStudentImage from "@/assets/trilha-aula-individual-adulto.jpg";
 import logoAsset from "@/assets/trilha-avatar.png.asset.json";
+import { courses } from "@/data/courses";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -47,13 +49,13 @@ const audiences = [
   { icon: BriefcaseBusiness, title: "Foco no Trabalho", text: "Domine o Pacote Office (Word, Excel, PowerPoint) e ferramentas requisitadas pelo mercado.", tone: "text-ink bg-ink/10" },
 ];
 
-const courses = [
-  { title: "Informática Básica", text: "Conceitos fundamentais para organizar arquivos, navegar na internet e usar o computador com segurança.", icon: Laptop },
-  { title: "Pacote Office", text: "Word, Excel e PowerPoint essenciais para o trabalho, estudos e tarefas diárias.", icon: BriefcaseBusiness },
-  { title: "Canva e Criatividade", text: "Criação de apresentações, conteúdos visuais e uso inteligente de ferramentas digitais.", icon: Palette },
-  { title: "Celular e Internet para Terceira Idade", text: "Aulas adaptadas para idosos ganharem autonomia e independência digital.", icon: Smartphone },
-  { title: "Aulas Particulares", text: "Atendimento individualizado para focar exatamente no que você precisa aprender.", icon: MessageCircle },
-  { title: "\u00a0Curriculum e Entrevista", text: "Uso de Inteligência Artificial na preparação do curriculum e treinos para entrevistas.", icon: Sparkles },
+const homeFaq = [
+  { question: "Onde fazer curso de informática em Sorocaba?", answer: "A Trilha Escola de Informática fica na Rua Assis Machado, 297, na Vila Hortência, em Sorocaba/SP. As aulas são presenciais e individuais, com horários de segunda a sexta, das 08:30 às 18:00, e sábado, das 09:00 às 12:00." },
+  { question: "Existem cursos de informática para iniciantes?", answer: "Sim. O curso de Informática Básica da Trilha foi pensado para quem está começando do zero, sem nenhuma experiência com computador. Você aprende no seu ritmo, com acompanhamento individual da professora." },
+  { question: "Os cursos são presenciais?", answer: "Sim. Todos os cursos da Trilha são presenciais, em Sorocaba, com aulas individuais. Você aprende praticando, com a professora ao seu lado para tirar dúvidas na hora." },
+  { question: "Como escolher o curso de informática mais adequado?", answer: "Depende do seu objetivo: Informática Básica para começar do zero, Pacote Office e Excel para o trabalho, Canva para criar artes, Celular e Internet para a Terceira Idade para ganhar autonomia no celular, Google Meu Negócio para divulgar sua empresa e Currículo e Entrevista para quem procura emprego. Fale com a Trilha pelo WhatsApp e a professora ajuda você a escolher." },
+  { question: "Existem aulas individuais?", answer: "Sim. Todas as aulas da Trilha são individuais. O conteúdo avança no seu ritmo, sem turma, sem comparação e sem pressa." },
+  { question: "Posso aprender informática mesmo começando do zero?", answer: "Pode. A maioria dos alunos da Trilha começa do zero ou está voltando a estudar depois de anos. O atendimento é acolhedor, paciente e adaptado a cada pessoa." },
 ];
 
 function Index() {
@@ -113,7 +115,26 @@ function Index() {
               <img src={adultStudentImage} alt="Professora da Trilha em aula individual de informática com um aluno adulto" loading="lazy" width={1200} height={912} className="h-96 w-full rounded-2xl object-cover object-center" />
             </div>
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {courses.map(({ title, text, icon: Icon }, i) => <article key={title} className={`group min-h-52 rounded-xl p-7 ${i === 0 ? "bg-coral text-primary-foreground" : i === 3 ? "bg-green text-secondary-foreground" : "border border-ink/10 bg-card"}`}><Icon size={28} /><h3 className="mt-8 text-2xl font-bold">{title}</h3><p className={`mt-3 leading-relaxed ${i === 0 ? "text-primary-foreground/85" : "text-ink/65"}`}>{text}</p></article>)}
+              {courses.map(({ slug, title, short, icon: Icon, tone }, i) => (
+                <article key={slug} className={`group flex min-h-52 flex-col rounded-xl p-7 ${i === 0 ? "bg-coral text-primary-foreground" : i === 3 ? "bg-green text-secondary-foreground" : "border border-ink/10 bg-card"}`}>
+                  <Icon size={28} />
+                  <h3 className="mt-8 text-2xl font-bold">{title}</h3>
+                  <p className={`mt-3 leading-relaxed ${i === 0 ? "text-primary-foreground/85" : "text-ink/65"}`}>{short}</p>
+                  <Link to={`/${slug}`} className={`mt-auto inline-flex items-center gap-1 pt-5 font-bold ${i === 0 || i === 3 ? "" : "text-coral"} hover:underline`}>Saiba mais <ChevronRight size={18} /></Link>
+                </article>
+              ))}
+            </div>
+
+            <div className="mx-auto mt-24 max-w-4xl">
+              <h2 className="text-3xl font-bold sm:text-4xl">Perguntas frequentes sobre os cursos</h2>
+              <Accordion type="single" collapsible className="mt-8">
+                {homeFaq.map((item, i) => (
+                  <AccordionItem key={item.question} value={`home-faq-${i}`} className="rounded-xl border border-ink/10 bg-card px-6">
+                    <AccordionTrigger className="text-left text-lg font-bold">{item.question}</AccordionTrigger>
+                    <AccordionContent className="text-base leading-relaxed text-ink/70">{item.answer}</AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>
