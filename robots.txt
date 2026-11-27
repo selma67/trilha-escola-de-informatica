@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://selmateresa1795791872000.0090155.meusitehostgator.com.br/sitemap.xml
