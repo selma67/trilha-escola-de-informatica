@@ -87,7 +87,7 @@ button{font:inherit}
 .course-number{font-size:9px;font-weight:700;letter-spacing:1px;color:#888B80}
 .course-icon{width:39px;height:39px;display:grid;place-items:center;margin:19px 0 15px;border-radius:50%;font:800 19px var(--display)}
 .icon-basic{background:#F9D7CE;color:#B74D3D}
-.icon-word{background:#E5EDF1;color:#456B7B}
+.icon-word{background:#F4E7D7;color:#A65A17}
 .icon-excel{background:#E5ECDD;color:#4E713D}
 .icon-powerpoint{background:#FCE8D3;color:#A65A17}
 .icon-canva{background:#E4EEF0;color:var(--turquoise)}
