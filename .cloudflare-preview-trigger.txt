@@ -1,0 +1,1 @@
+Arquivo técnico para disparar uma nova compilação de pré-visualização no Cloudflare. Não altera o site publicado.

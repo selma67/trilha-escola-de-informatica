@@ -88,12 +88,12 @@ export function CoursePage({ course }: { course: Course }) {
           </div>
         </section>
 
-        <section className="overflow-hidden bg-ink py-16 text-primary-foreground lg:py-20">
+        <section className="relative overflow-hidden bg-green/10 py-16 text-ink lg:py-20">
           <div className="mx-auto max-w-4xl px-5 lg:px-8">
             <h2 className="text-3xl font-bold sm:text-4xl">Dê o primeiro passo</h2>
-            <p className="mt-4 max-w-xl text-lg leading-relaxed text-primary-foreground/70">Entre em contato com a Trilha Escola de Informática e tire suas dúvidas sobre o curso de {course.title}, horários e matrícula.</p>
+            <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink/75">Entre em contato com a Trilha Escola de Informática e tire suas dúvidas sobre o curso de {course.title}, horários e matrícula.</p>
             <a href={whatsappCourse(course.title)} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-3 rounded-xl bg-whatsapp px-7 py-4 text-lg font-bold text-primary-foreground"><MessageCircle size={22} /> Falar com a Trilha no WhatsApp</a>
-            <div className="mt-10 flex flex-col gap-4 text-primary-foreground/80 sm:flex-row sm:gap-10">
+            <div className="mt-10 flex flex-col gap-4 text-ink/75 sm:flex-row sm:gap-10">
               <p className="flex items-center gap-2"><MapPin size={18} className="shrink-0" /> Rua Assis Machado, 297 — Vila Hortência — Sorocaba/SP</p>
               <p className="flex items-center gap-2"><Clock3 size={18} className="shrink-0" /> Seg a Sex: 08:30 - 18:00 | Sáb: 09:00 - 12:00</p>
             </div>
