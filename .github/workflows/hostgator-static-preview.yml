@@ -1,0 +1,42 @@
+name: Build static site for HostGator
+
+on:
+  push:
+    branches:
+      - hostgator-static-preview
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build and prerender pages
+        run: bun run build
+
+      - name: Package static website
+        run: |
+          test -d .output/public
+          cd .output/public
+          zip -r ../../../trilha-hostgator-preview.zip .
+
+      - name: Upload website package
+        uses: actions/upload-artifact@v4
+        with:
+          name: trilha-hostgator-preview
+          path: trilha-hostgator-preview.zip
+          if-no-files-found: error
+          retention-days: 7
