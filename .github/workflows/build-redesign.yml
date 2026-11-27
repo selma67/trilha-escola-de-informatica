@@ -1,0 +1,40 @@
+name: Build do redesign TRILHA
+
+on:
+  push:
+    branches:
+      - redesign-identidade-luminosa
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v4
+      - name: Instalar Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Instalar dependências
+        run: bun install --frozen-lockfile
+      - name: Compilar
+        run: bun run build
+      - name: Listar arquivos gerados
+        run: |
+          echo "=== dist ==="
+          find dist -maxdepth 3 -type f 2>/dev/null | head -100 || true
+          echo "=== .output ==="
+          find .output -maxdepth 4 -type f 2>/dev/null | head -150 || true
+      - name: Guardar artefatos
+        uses: actions/upload-artifact@v4
+        with:
+          name: trilha-redesign-build
+          path: |
+            dist/
+            .output/public/
+          if-no-files-found: error
+          retention-days: 7
