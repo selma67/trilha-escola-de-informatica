@@ -31,7 +31,7 @@ jobs:
         run: |
           test -d .output/public
           cd .output/public
-          zip -r ../../../trilha-hostgator-preview.zip .
+          zip -r ../../trilha-hostgator-preview.zip .
 
       - name: Upload website package
         uses: actions/upload-artifact@v4
