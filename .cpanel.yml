@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/selmat59/public_html/
+    - /bin/cp index.html styles.css script.js robots.txt "$DEPLOYPATH"
