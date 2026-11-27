@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://trilhaescoladeinformatica.com.br/sitemap.xml
